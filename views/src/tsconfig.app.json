@@ -1,0 +1,23 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "baseUrl": "./",
+    "module": "es2015",
+    "types": ["node"],
+    "target":["node"],
+    "child_process": "empty"
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ],
+  "externals": {
+    "xhr2": "XMLHttpRequest",
+    "xmlhttprequest": "XMLHttpRequest",
+    "node-fetch": "fetch",
+    "text-encoding": "TextEncoder",
+    "urlutils": "URL",
+    "webcrypto": "crypto"
+  }
+}

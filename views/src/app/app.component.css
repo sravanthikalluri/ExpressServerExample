@@ -1,0 +1,115 @@
+.row {
+  margin:0px !important;
+}
+table, th, td {
+  border-color: rgba(0, 0, 0, 0.64);
+  border-spacing: 5px;
+  border-collapse: separate;
+}
+th,td {
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background: #A61F36;
+  color: white;
+}
+table tr:nth-child(even) {
+  background: #f5f5f5;
+}
+.btn{
+  background: white;
+  border: 1px solid silver;
+  border-radius: 12px;
+  float: right;
+}
+.heading {
+  margin-left:12px;
+}
+sup {
+  color: red;
+  font-size:14px;
+}
+.form-horizontal {
+  margin:10px;
+}
+.error-text {
+  color:#a94442;
+}
+.form-horizontal .control-label {
+  color:black !important;
+}
+
+.demo-header {
+  height:60px;
+}
+.demo-header a {
+  text-decoration: none;
+  color: inherit;
+}
+/* HEADER */
+.demo-header .header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background-color: #000;
+}
+/* MENU */
+.demo-header .menu {
+  float: left;
+}
+.demo-header .menu a {
+  padding: 0 10px;
+}
+.demo-header .menu a:hover {
+  color: #c5cae9;
+}
+
+.user-info {
+  margin: 0px auto !important;
+  width: 65%;
+}
+.add-user {
+  padding:0px !important;
+}
+.add-user h3{
+  float:left;
+}
+.add-user div{
+  float: right;
+  margin-top: 15px;
+  width:100px;
+}
+.addUserbtn {
+  width:100%;
+}
+.disable {
+  color:black;
+  background: #f5f5f5;
+}
+.active {
+  color:white;
+  background: #f47b2b;
+  border: none;
+}
+.add-user button {
+  background: #A61F36;
+  color:white;
+  border:none;
+}
+.footer{
+  width: auto;
+  height: 40px;
+  background: #F5F5F5;
+  color: #666666;
+  font-size: 1em;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  top: 22.8em;
+}

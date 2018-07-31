@@ -1,0 +1,87 @@
+<div class="site-container demo-header row">
+  <div class="site-pusher">
+    <header class="header">
+      <nav class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+  </div>
+</div>
+
+<div class="row">
+  <div class="user-info ">
+    <div class="add-user col-sm-12">
+      <h3> Users Details </h3>
+      <div>
+        <button class="btn" (click)="addUser()"> Add User</button>
+      </div>
+    </div>
+    <table width="100%">
+      <thead>
+         <tr>
+           <th>UserName</th>
+           <th>Age</th>
+           <th>Email</th>
+         </tr>
+      </thead>
+      <tbody *ngIf="getUserDetails.length > 0">
+      <tr *ngFor="let data of getUserDetails">
+        <td>{{data.uname}}</td>
+        <td>{{data.age}}</td>
+        <td>{{data.email}}</td>
+      </tr>
+      </tbody>
+      <tbody *ngIf="getUserDetails.length < 1">
+       <span>No Users Added Yet</span>
+      </tbody>
+    </table>
+  </div>
+</div>
+<footer _ngcontent-hps-8="" class="footer" role="contentinfo">
+  Copyright © 2017 People Tech
+</footer>
+<modal #addUserModal [animation]="false" [backdrop]="'static'" [keyboard]="false">
+
+  <modal-header [showDismiss]="true">
+    <h3 class="heading">Add a User</h3>
+  </modal-header>
+  <modal-body>
+    <form class="form-horizontal" [formGroup]="AddUser">
+      <div class="form-group" [ngClass]="{'has-error':AddUser.controls.uname.invalid && (AddUser.controls.uname.dirty || AddUser.controls.uname.touched)}">
+        <label  class="col-sm-2  control-label">User Name <sup>*</sup></label>
+        <div class="col-sm-7">
+          <input type="uname" class="form-control" formControlName="uname" >
+        </div>
+        <div class="col-sm-3 error-text" *ngIf="AddUser.controls.uname.invalid && (AddUser.controls.uname.dirty || AddUser.controls.uname.touched)">
+          UserName should be of 16 characters only.
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error':AddUser.controls.age.invalid && (AddUser.controls.age.dirty || AddUser.controls.age.touched)}">
+        <label  class="col-sm-2 control-label">Age<sup>*</sup></label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" formControlName="age" >
+        </div>
+        <div class="col-sm-3 error-text" *ngIf="AddUser.controls.age.invalid && (AddUser.controls.age.dirty || AddUser.controls.age.touched)">
+          Age shouldn't be lessthan 0 and greater than 100
+        </div>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error':AddUser.controls.email.invalid && (AddUser.controls.email.dirty || AddUser.controls.email.touched)}">
+        <label  class="col-sm-2 control-label">Email<sup>*</sup></label>
+        <div class="col-sm-7">
+          <input type="email" class="form-control" formControlName="email" >
+        </div>
+        <div class="col-sm-3 error-text" *ngIf="AddUser.controls.email.invalid && (AddUser.controls.email.dirty || AddUser.controls.email.touched)">
+         email required
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-3">
+          <button type="submit" class="btn addUserbtn" [ngClass]="{'disable':!AddUser.valid,'active':AddUser.valid}"(click)="add()" [disabled]="!AddUser.valid">Add</button>
+        </div>
+      </div>
+    </form>
+  </modal-body>
+</modal>

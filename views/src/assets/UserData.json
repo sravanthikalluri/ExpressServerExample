@@ -1,0 +1,17 @@
+[
+  {
+    "uname":"Miller",
+    "age":23,
+    "email":"miller@gmail.com"
+  },
+  {
+    "uname":"Scott",
+    "age":21,
+    "email":"scott@gmail.com"
+  },
+  {
+    "uname":"Alen",
+    "age":25,
+    "email":"Alen@gmail.com"
+  }
+]

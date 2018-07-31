@@ -1,0 +1,6 @@
+{
+  "hiveHost" : "14.142.119.130",
+  "hivePort" : 10002,
+  "hiveUser" : "hduser",
+  "hivePassword" : "ptg@123"
+}
